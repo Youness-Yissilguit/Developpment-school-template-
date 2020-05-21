@@ -1,0 +1,563 @@
+/*colors:#08526D | #EC1C23*/
+
+/*globale*/
+body{
+	overflow-x: hidden
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Rubik', sans-serif
+}
+section{
+	padding: 40px 5px
+}
+img{
+	object-fit: cover;
+}
+.glass-effect{
+	position: relative;
+	overflow: hidden
+}
+.glass-effect::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: -100%;
+	background: linear-gradient(125deg, transparent, rgba(255, 255, 255, .4), transparent);
+	transition: all .4s
+}
+.glass-effect:hover::before{
+	left: 100%;
+}
+/*start the upperbar*/
+.upperbar{
+	background-color: #08526D;
+	color: #FFF;
+	padding: 6px;
+	font-size: 15px;
+}
+.upperbar .info{
+	margin-top: 10px
+}
+.upperbar .quot{
+	color: #ccc;
+	margin-top: 10px
+}
+.upperbar .quot span{
+	border: 2px solid #EC1C23;
+	padding: 4px;
+	border-radius: 7px;
+	display: inline-block;
+	margin:0 0 0 20px;
+	cursor: pointer
+}
+.upperbar .quot span:hover{color: #FFF}
+/*end the upperbar*/
+
+/*start the navbar*/
+.navbar{
+	padding: 13px;
+	z-index: 99
+}
+nav .navbar-brand{
+	font-size: 22px
+}
+nav .navbar-brand .sapnone, .nav-link{
+	color: #08526D
+}
+nav .navbar-brand .sapntwo{
+	color: #EC1C23
+}
+.navbar-light .navbar-nav .nav-link {
+	font-size: 16px;
+	color: #000;
+	text-transform: uppercase
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .dropdown-item:hover{
+	color: #EC1C23
+}
+nav .dropdown-item{
+	padding: 15px
+}
+/*start the header*/
+header .carousel-inner h1{
+	position: absolute;
+    color: #FFF;
+    z-index: 3;
+    top: 10%;
+    left: 3%;
+    max-width: 50%;
+    line-height: 1.5;
+    font-size: 55px;
+}
+.carousel-inner h1 span{
+	background-color: #EC1C23;
+	padding: 1px 6px
+}
+.carousel-inner .overlay{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 2
+}
+header .slide1{
+	background:url('../images/slider1.jpg') no-repeat ;
+}
+header .slide2{
+	background:url('../images/slider2.jpeg') no-repeat ;
+}
+header .slide3{
+	background:url('../images/slider3.jpg') no-repeat ;
+}
+header .carousel-item{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+header .carousel-indicators li{
+	width: 50px;
+	height: 5px;
+	background-color: #FFF;
+	opacity: 1;
+	transition: all .5s ease-in-out;
+}
+header .carousel-indicators li.active{
+	background-color: #EC1C23
+}
+/*end the header*/
+
+/*start the section our services*/
+.our-services h2{
+	margin-bottom: 50px
+}
+
+.our-services .service i{
+	width: 65px;
+  height: 65px;
+  line-height: 65px;
+  background-color: #ec1c23;
+  color: #FFF;
+  text-align: center;
+	margin-bottom: 10px;
+}
+.our-services .service h4{
+	color: #08526D
+}
+.our-services .service p{
+	color: #929292;
+	margin-bottom: 15px
+}
+/*end the section our services*/
+
+/*strat th section overview*/
+.overview{
+	background-color: #F1F1F1
+}
+.overview p{
+	margin: 20px auto 10px;
+	line-height: 1.7;
+	color: #616161
+}
+.overview span{
+	display: block;
+	font-style: italic;
+	letter-spacing: 4px;
+	color: #6b6b6b
+}
+.overview button{
+	background-color: #EC1C23;
+    color: #FFF;
+    border: 0;
+    outline: none;
+    margin: 20px auto;
+    padding: 10px 15px;
+	border-radius: 10px
+}
+/*end the section overview*/
+
+/*strat the section work*/
+.work p{
+	margin: 20px auto;
+	line-height: 1.7;
+	color: #616161
+}
+.work ul li{
+	display: inline-block;
+	border: 2px solid #08526D;
+	padding: 8px 8px;
+	margin: 10px 5px 10px 0;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-transition:all .5s;
+	-moz-transition:all .5s;
+	-o-transition:all .5s;
+	transition:all .5s
+}
+.work ul li:hover, .work ul li.active{
+	background-color: #EC1C23;
+	color: #FFF;
+	border: 2px solid transparent
+}
+.work .image-parent{
+	margin: 40px 0 0;
+}
+.work .image-parent .image{
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+	-webkit-transition:all .5s;
+	-moz-transition:all .5s;
+	-o-transition:all .5s;
+	transition:all .5s
+}
+.work .image-parent .image img{
+	height: 100%;
+}
+.work .image-parent .image .overlay{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(8, 82, 109, 0.9);
+	color: #FFF;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.work .image-parent .image:hover .overlay{
+	display: flex
+}
+/*end the section work*/
+
+/*strat the section post*/
+
+.post p{
+	margin: 20px auto 40px;
+	line-height: 1.7;
+	color: #616161
+}
+.card{
+	margin: 15px auto;
+}
+.post .card .card-title{
+	color: #08526D
+}
+.post .card span{
+	color: #CACACA
+}
+.post .card .card-text{
+	color: #929292;
+	margin: 10px 0
+}
+.post .card a{
+	color: #EC1C23
+}
+/*end the section post*/
+
+/*strat th section testimenial*/
+.testim{
+	background: url('../images/testim.jpg') no-repeat;
+	background-size: cover;
+}
+.testim .overlay{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 0
+}
+.testim .carousel-inner .carousel-caption{
+	top:50%;
+	margin-top: -142px
+}
+
+.testim .carousel-inner .carousel-caption img{
+	width: 100px;
+	height: 100px;
+	margin: 10px auto 20px
+}
+.testim .carousel-inner .carousel-caption h5{
+	margin: 5px 0
+}
+.testim .carousel-inner .carousel-caption span{
+	color: #B7B7B7;
+	font-size: 13px
+}
+/*end the section testimenial*/
+
+/*strat th section priring*/
+.pricing{
+	background-color: #F1F1F1
+}
+.pricing p{
+	width: 80%;
+	margin: 40px auto
+}
+.pricing .card .card-body{
+	padding: 0;
+	padding-bottom: 15px
+}
+.pricing .card .card-body h5{
+	color: #08526D;
+	padding: 30px 0 20px;
+	font-size: 25px;
+	margin-bottom: 0;
+}
+.pricing .card .card-body h5 span{
+	font-size: 14px;
+	color:  #B7B7B7;
+	display: block;
+	font-weight: 100
+}
+.pricing .card .card-body h3{
+	color: #08526D;
+	font-size: 35px;
+	padding: 7px;
+	background-color: #F7F7F7
+}
+.pricing .card .card-body h3 span{
+	font-size: 14px;
+}
+.pricing .card .card-body .readone{
+	background-color: #EC1C23;
+	color: #FFF;
+	padding: 9px
+}
+.pricing .card .card-body .card-text li{
+	color: #B7B7B7;
+	padding: 10px
+}
+ul{
+	padding: 0
+}
+.pricing .card .card-body a{
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+	background-color: #EC1C23;
+	padding: 10px 20px;
+	margin-top: 15px;
+	position: relative
+}
+.pricing .card .card-body .blue-one{
+	background-color: #08526D
+}
+/*end the section pricing*/
+
+/*strat th section Way Us*/
+.way-us .col-md{
+	padding: 0
+}
+.way-us img{
+	height: 100%
+}
+.way-us .description{
+	background-color: #08526D;
+	color: #FFF;
+	padding:50px 30px;
+	height: 100%
+}
+.way-us .description p{
+	line-height: 1.8;
+	color: #c5c5c5
+}
+.way-us .description button{
+	background-color: #EC1C23;
+  color: #FFF;
+  border: 0;
+  outline: none;
+  margin: 20px auto;
+  padding: 10px 15px;
+	border-radius: 10px
+}
+/*end the section Way Us*/
+
+/*strat th section statistic*/
+.statistic i, .statistic h3{
+	color: #08526D
+}
+.statistic h3{
+	margin-bottom: 0
+}
+.statistic span{
+	color: #EC1C23;
+	margin-bottom: 40px;
+	font-size: 18px
+}
+/*end the section statistic*/
+
+/*strat th section contact us*/
+.contact-us{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-color: #08526D;
+	display: none
+}
+.contact-us h2{
+	margin: 30px 0
+}
+.contact-us .popup-box{
+	width: 40%;
+	margin-left: 50%;
+	margin-top: 25%;
+	transform: translate(-50%, -50%);
+	background-color: #FFF;
+	padding: 10px;
+	border-radius: 15px;
+	position: relative
+}
+
+.contact-us .popup-box a{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #495057;
+}
+.contact-us .popup-box .input{
+	width:100%;
+	margin-bottom: 15px;
+}
+.contact-us .popup-box .input input{
+	height: 50px
+}
+.contact-us .popup-box .input textarea{
+	height: 80px;
+	resize: none
+}
+.contact-us .popup-box .input input:focus,
+.contact-us .popup-box .input textarea:focus{
+	box-shadow: none;
+	border: 1px solid #EC1C23
+}
+.contact-us .popup-box input[type='submit']{
+	padding: 8px;
+	border: 0;
+	outline: none;
+	background-color: #EC1C23;
+	color: #FFF;
+	border-radius: 0 0 10px 10px;
+	font-size: 20px;
+	opacity: .9;
+}
+.contact-us .popup-box input[type='submit']:hover{
+	opacity: 1
+}
+.contact-us .popup-box .input-group-prepend{
+	transition: all .3s linear
+}
+.contact-us .popup-box .input:hover .input-group-prepend i{
+	perspective: 1000px;
+	transform: scale(1.1);
+	color: #EC1C23
+}
+/*end the section contact us*/
+
+/*strat th footer*/
+footer{
+	padding: 20px;
+	background-color: #F1F1F1
+}
+footer .col-md-4, footer .col-md-5, footer .col-md-2{
+	margin-bottom: 30px
+}
+footer .paragraph a:first-of-type{
+	font-size: 25px
+}
+footer .paragraph a:first-of-type:hover{
+	text-decoration: none
+}
+footer .paragraph a .sapnone{
+	color: #08526D
+}
+footer .paragraph a .sapntwo{
+	color: #EC1C23
+}
+footer .paragraph .lead{
+	font-size: 18px;
+	margin: 15px 0 10px
+}
+footer .paragraph a:last-of-type{
+	color: #08526D
+}
+footer .link h4, footer .contact h4{
+	color: #08526D
+}
+footer .link a{
+	display: block;
+	padding: 10px;
+	color: #8e8e8e;
+
+}
+footer .contact p, footer .contact i{
+	color: #8e8e8e;
+	cursor: pointer;
+	margin-right: 10px
+}
+footer .contact i:hover{
+	color: #222
+}
+.copy{
+	background-color: #ed1d24;
+	color: #FFF;
+	padding: 10px;
+	font-size: 14px;
+}
+/*end the footer*/
+
+/*scroll top button*/
+.fa-chevron-circle-up{
+	position: fixed;
+	bottom: 30px;
+	right: 10px;
+	z-index: 9999;
+	color: #08526D;
+	cursor: pointer;
+	font-size: 40px;
+	border: 4px solid #EC1C23;
+	border-radius: 50%
+}
+
+/*strat the media*/
+
+@media (max-width:768px){
+	header .carousel-inner h1{
+		font-size: 35px;
+	}
+	/*work section*/
+	.work ul{
+		display: flex;
+    	justify-content: center
+	}
+	.work ul li{
+		width: 50%;
+		margin: 10px;
+	}
+	.card{
+		width: 100% !important;
+		margin-bottom: 40px !important
+	}
+	/*poupup section*/
+	.contact-us .popup-box{
+		margin:40px auto 0;
+		width: 90%;
+		animation: none;
+		transform: translate(0)
+
+	}
+}
+/*end the media*/
+/*#08526D, #EC1C23*/
